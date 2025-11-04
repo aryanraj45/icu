@@ -13,7 +13,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"solar"}
         }
         chinese{
             eras{
@@ -25,7 +24,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunisolar"}
         }
         coptic{
             eras{
@@ -37,7 +35,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"other"}
         }
         dangi{
             eras{
@@ -49,7 +46,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunisolar"}
         }
         ethiopic{
             eras{
@@ -68,7 +64,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"other"}
         }
         ethiopic-amete-alem{
             eras{
@@ -98,7 +93,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"solar"}
         }
         hebrew{
             eras{
@@ -110,7 +104,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunisolar"}
         }
         indian{
             eras{
@@ -140,7 +133,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunar"}
         }
         islamic-civil{
             eras{
@@ -159,7 +151,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunar"}
         }
         islamic-rgsa{
             eras{
@@ -178,7 +169,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunar"}
         }
         islamic-tbla{
             eras{
@@ -197,7 +187,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunar"}
         }
         islamic-umalqura{
             eras{
@@ -216,7 +205,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"lunar"}
         }
         japanese{
             eras{
@@ -1881,7 +1869,6 @@ supplementalData:table(nofallback){
                 }
             }
             inheritEras{"gregorian"}
-            system{"solar"}
         }
         persian{
             eras{
@@ -1893,7 +1880,6 @@ supplementalData:table(nofallback){
                     }
                 }
             }
-            system{"solar"}
         }
         roc{
             eras{
