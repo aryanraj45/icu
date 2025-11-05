@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762379317474,
+  "lastUpdate": 1762382521748,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -41007,6 +41007,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestCharsetEncoderICU",
             "value": 2.55101565605826,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "elango@unicode.org",
+            "name": "Elango Cheran",
+            "username": "echeran"
+          },
+          "committer": {
+            "email": "elango@unicode.org",
+            "name": "Elango Cheran",
+            "username": "echeran"
+          },
+          "distinct": true,
+          "id": "81f06ac6d67b7e8e4f6c41d7416196a08df224ae",
+          "message": "ICU-23091 Update version of Java source formatter",
+          "timestamp": "2025-11-05T14:20:18-08:00",
+          "tree_id": "a2e1478e7f379a4f261ae29519acd5835403c649",
+          "url": "https://github.com/unicode-org/icu/commit/81f06ac6d67b7e8e4f6c41d7416196a08df224ae"
+        },
+        "date": 1762382144768,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestCharsetEncoderICU",
+            "value": 2.535568099035168,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
