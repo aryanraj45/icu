@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762300552008,
+  "lastUpdate": 1762379646968,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -77919,6 +77919,60 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestIcu_BinarySearch_usekey",
             "value": 16436214.3497,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "grhoten@users.noreply.github.com",
+            "name": "George Rhoten",
+            "username": "grhoten"
+          },
+          "committer": {
+            "email": "grhoten@users.noreply.github.com",
+            "name": "George Rhoten",
+            "username": "grhoten"
+          },
+          "distinct": true,
+          "id": "e501c22ce41e5b9c987b12f1fc21c42c9fed2beb",
+          "message": "ICU-23144 Prevent exponential parsing time in RBNF. Sync ICU4C and ICU4J RBNF. Fix roundtrip parsing of rules that use 2 of the same substitution type. Fix bad parsing of rules with delimiters that can be a part of a number.",
+          "timestamp": "2025-11-05T13:17:54-08:00",
+          "tree_id": "344dd62a81aba9b3484864f51674d0806fe1a556",
+          "url": "https://github.com/unicode-org/icu/commit/e501c22ce41e5b9c987b12f1fc21c42c9fed2beb"
+        },
+        "date": 1762379238617,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestIcu_KeyGen_null",
+            "value": 336.6876,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestIcu_qsort_strcoll_null",
+            "value": 55889902.3447,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestIcu_qsort_usekey",
+            "value": 15219431.8317,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestIcu_BinarySearch_strcoll_null",
+            "value": 55346965.7898,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestIcu_BinarySearch_usekey",
+            "value": 17830966.1371,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
