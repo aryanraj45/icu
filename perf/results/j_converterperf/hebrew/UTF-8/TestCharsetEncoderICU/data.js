@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762299906306,
+  "lastUpdate": 1762379349439,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -40677,6 +40677,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestCharsetEncoderICU",
             "value": 3.749684801435978,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "grhoten@users.noreply.github.com",
+            "name": "George Rhoten",
+            "username": "grhoten"
+          },
+          "committer": {
+            "email": "grhoten@users.noreply.github.com",
+            "name": "George Rhoten",
+            "username": "grhoten"
+          },
+          "distinct": true,
+          "id": "e501c22ce41e5b9c987b12f1fc21c42c9fed2beb",
+          "message": "ICU-23144 Prevent exponential parsing time in RBNF. Sync ICU4C and ICU4J RBNF. Fix roundtrip parsing of rules that use 2 of the same substitution type. Fix bad parsing of rules with delimiters that can be a part of a number.",
+          "timestamp": "2025-11-05T13:17:54-08:00",
+          "tree_id": "344dd62a81aba9b3484864f51674d0806fe1a556",
+          "url": "https://github.com/unicode-org/icu/commit/e501c22ce41e5b9c987b12f1fc21c42c9fed2beb"
+        },
+        "date": 1762378976190,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestCharsetEncoderICU",
+            "value": 4.2167852523435805,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
