@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1762453665502,
+  "lastUpdate": 1762457411859,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -41007,6 +41007,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestICU_NFC_Orig_Text",
             "value": 4.57638872051808,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "markus.icu@gmail.com",
+            "name": "Markus Scherer",
+            "username": "markusicu"
+          },
+          "committer": {
+            "email": "markus.icu@gmail.com",
+            "name": "Markus Scherer",
+            "username": "markusicu"
+          },
+          "distinct": true,
+          "id": "01202304f022bf0ca6bb188c857ea6677e6aa20e",
+          "message": "ICU-23248 unset sensitive on tickets after one release not two",
+          "timestamp": "2025-11-06T11:19:38-08:00",
+          "tree_id": "b4b7150aee2aded96529d9c5f9c6b44611221892",
+          "url": "https://github.com/unicode-org/icu/commit/01202304f022bf0ca6bb188c857ea6677e6aa20e"
+        },
+        "date": 1762457048668,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestICU_NFC_Orig_Text",
+            "value": 4.232759475890352,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
