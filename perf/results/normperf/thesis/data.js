@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1763784898886,
+  "lastUpdate": 1764018106132,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -87117,6 +87117,66 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestICU_NFD_Orig_Text",
             "value": 2.998,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nmihai_2000@yahoo.com",
+            "name": "Mihai Nita",
+            "username": "mihnita"
+          },
+          "committer": {
+            "email": "nmihai_2000@yahoo.com",
+            "name": "Mihai Nita",
+            "username": "mihnita"
+          },
+          "distinct": true,
+          "id": "8c13877b11f56e37462e4bb05780f83a1f3d00cf",
+          "message": "ICU-23049 Re-enable UWP in CI\n\nARM 32 not supported in newer SDKs.\n`Build.Windows.UWP.ProjectConfiguration.props` now does what\n`Build.Windows.ProjectConfiguration.props` was already doing.\n\nI think that in an ideal world the uwp projects / properties\nshould be a lot more similar to the non-uwp ones.",
+          "timestamp": "2025-11-24T12:04:30-08:00",
+          "tree_id": "7218db7b8f58d1500c5c70d4d7f35f10812b91f2",
+          "url": "https://github.com/unicode-org/icu/commit/8c13877b11f56e37462e4bb05780f83a1f3d00cf"
+        },
+        "date": 1764017734316,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestICU_NFC_NFD_Text",
+            "value": 3.1543,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFC_NFC_Text",
+            "value": 3.1315,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFC_Orig_Text",
+            "value": 3.1317,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFD_NFD_Text",
+            "value": 3.0017,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFD_NFC_Text",
+            "value": 2.9849,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFD_Orig_Text",
+            "value": 2.9962,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
