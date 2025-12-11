@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1765391365713,
+  "lastUpdate": 1765451898248,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -87777,6 +87777,66 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestICU_NFD_Orig_Text",
             "value": 11.8624,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "egg.robin.leroy@gmail.com",
+            "name": "Robin Leroy",
+            "username": "eggrobin"
+          },
+          "committer": {
+            "email": "egg.robin.leroy@gmail.com",
+            "name": "Robin Leroy",
+            "username": "eggrobin"
+          },
+          "distinct": true,
+          "id": "c7e6cfbf3ab3059e2dcf6f1ac30573c688d87257",
+          "message": "ICU-23257 A somewhat more structured UnicodeSet parser\n\nSee #3604",
+          "timestamp": "2025-12-11T11:39:00+01:00",
+          "tree_id": "b78286ed81e332647132b4bdb27876ccfb7dc1eb",
+          "url": "https://github.com/unicode-org/icu/commit/c7e6cfbf3ab3059e2dcf6f1ac30573c688d87257"
+        },
+        "date": 1765451509778,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestICU_NFC_NFD_Text",
+            "value": 12.5205,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFC_NFC_Text",
+            "value": 9.071,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFC_Orig_Text",
+            "value": 9.113,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFD_NFD_Text",
+            "value": 10.1193,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFD_NFC_Text",
+            "value": 10.9201,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "TestICU_NFD_Orig_Text",
+            "value": 10.8946,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
