@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1765828468799,
+  "lastUpdate": 1765839340928,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -50901,6 +50901,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "Test_ICU_Backward_Search",
             "value": 50.4851,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nmihai_2000@yahoo.com",
+            "name": "Mihai Nita",
+            "username": "mihnita"
+          },
+          "committer": {
+            "email": "nmihai_2000@yahoo.com",
+            "name": "Mihai Nita",
+            "username": "mihnita"
+          },
+          "distinct": true,
+          "id": "62121da80ad632d3dabaec8770680df6cdc8d49f",
+          "message": "ICU-23270 Update documentation",
+          "timestamp": "2025-12-15T14:42:10-08:00",
+          "tree_id": "ac617ea83d1b93fa2b7524768c7a7da0176e401d",
+          "url": "https://github.com/unicode-org/icu/commit/62121da80ad632d3dabaec8770680df6cdc8d49f"
+        },
+        "date": 1765838956180,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "Test_ICU_Forward_Search",
+            "value": 22.6951,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "Test_ICU_Backward_Search",
+            "value": 50.1588,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
