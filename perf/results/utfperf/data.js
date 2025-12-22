@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1766375421652,
+  "lastUpdate": 1766399789159,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -62451,6 +62451,48 @@ window.BENCHMARK_DATA = {
           {
             "name": "FromUTF8",
             "value": 1.9276,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "nmihai_2000@yahoo.com",
+            "name": "Mihai Nita",
+            "username": "mihnita"
+          },
+          "committer": {
+            "email": "fredrik@roubert.name",
+            "name": "Fredrik Roubert",
+            "username": "roubert"
+          },
+          "distinct": true,
+          "id": "cd4bcbd4c5aac4c9b866ee5e0df13a0ec10fa1d2",
+          "message": "ICU-23270 Fix failing icu4j perf in CI - ndjson support",
+          "timestamp": "2025-12-22T19:02:50+09:00",
+          "tree_id": "5532d6dc3e7027453ea8857861355136da7a2f01",
+          "url": "https://github.com/unicode-org/icu/commit/cd4bcbd4c5aac4c9b866ee5e0df13a0ec10fa1d2"
+        },
+        "date": 1766399388905,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "Roundtrip",
+            "value": 10.1155,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "FromUnicode",
+            "value": 3.8324,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          },
+          {
+            "name": "FromUTF8",
+            "value": 1.949,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
