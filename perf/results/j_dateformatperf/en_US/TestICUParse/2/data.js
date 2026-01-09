@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1767918765114,
+  "lastUpdate": 1767998932855,
   "repoUrl": "https://github.com/unicode-org/icu",
   "entries": {
     "Benchmark": [
@@ -41787,6 +41787,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "TestICUParse",
             "value": 135.7687474430547,
+            "unit": "ns/iter",
+            "biggerIsBetter": false
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "egg.robin.leroy@gmail.com",
+            "name": "Robin Leroy",
+            "username": "eggrobin"
+          },
+          "committer": {
+            "email": "egg.robin.leroy@gmail.com",
+            "name": "Robin Leroy",
+            "username": "eggrobin"
+          },
+          "distinct": true,
+          "id": "8db81d8ab657409b41decebd81fcfce4029c619c",
+          "message": "ICU-23308 Disallow trailing = on UnicodeSet unary-query",
+          "timestamp": "2026-01-09T23:27:46+01:00",
+          "tree_id": "e24a885b86864119fe7eb4ff5c7152541e780d8b",
+          "url": "https://github.com/unicode-org/icu/commit/8db81d8ab657409b41decebd81fcfce4029c619c"
+        },
+        "date": 1767998527814,
+        "tool": "ndjson",
+        "benches": [
+          {
+            "name": "TestICUParse",
+            "value": 132.49507073985922,
             "unit": "ns/iter",
             "biggerIsBetter": false
           }
