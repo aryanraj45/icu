@@ -3828,15 +3828,59 @@ public class UnicodeSet extends UnicodeFilter
             propName = pattern.substring(pos, close);
             valueName = null;
 
-            // Handle \N{name}
+            // Handle \N{name} and extended forms \N{hex:name}
             if (isName) {
-                // This is a little inefficient since it means we have to
-                // parse "na" back to UProperty.NAME even though we already
-                // know it's UProperty.NAME.  If we refactor the API to
-                // support args of (int, String) then we can remove
-                // "na" and make this a little more efficient.
-                valueName = propName;
-                propName = "na";
+                // Check for hex:name format
+                int colonPos = propName.indexOf(':');
+                if (colonPos > 0) {
+                    // Extract hex prefix
+                    String hexStr = propName.substring(0, colonPos);
+                    String nameToMatch = propName.substring(colonPos + 1);
+                    
+                    // Parse hex code point
+                    int codePoint;
+                    try {
+                        codePoint = Integer.parseInt(hexStr, 16);
+                    } catch (NumberFormatException e) {
+                        throw new IllegalArgumentException("Invalid hex code point: " + hexStr);
+                    }
+                    
+                    if (codePoint < 0 || codePoint > 0x10FFFF) {
+                        throw new IllegalArgumentException("Code point out of range: " + hexStr);
+                    }
+                    
+                    // Get actual name for the code point
+                    String actualName = com.ibm.icu.lang.UCharacter.getName(codePoint);
+                    
+                    // Validate name matches
+                    boolean matches = nameToMatch.equals(actualName);
+                    if (!matches) {
+                        // Also try resolving the name to see if it points to same code point
+                        int resolvedCP = com.ibm.icu.lang.UCharacter.getCharFromName(nameToMatch);
+                        matches = (resolvedCP == codePoint);
+                    }
+                    
+                    if (!matches) {
+                        throw new IllegalArgumentException(
+                            "Name mismatch: U+" + hexStr + " is named '" + actualName + 
+                            "', not '" + nameToMatch + "'");
+                    }
+                    
+                    // Add the validated character directly
+                    clear();
+                    add(codePoint);
+                    ppos.setIndex(close + 1);
+                    return this;
+                } else {
+                    // Standard \N{name} format
+                    // This is a little inefficient since it means we have to
+                    // parse "na" back to UProperty.NAME even though we already
+                    // know it's UProperty.NAME.  If we refactor the API to
+                    // support args of (int, String) then we can remove
+                    // "na" and make this a little more efficient.
+                    valueName = propName;
+                    propName = "na";
+                }
             }
         }
 

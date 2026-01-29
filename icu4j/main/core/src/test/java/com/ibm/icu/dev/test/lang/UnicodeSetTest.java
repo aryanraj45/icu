@@ -3756,4 +3756,45 @@ public class UnicodeSetTest extends CoreTestFmwk {
 
         assertEquals("normal and parallel give different sum", sumNormal, sumParallel);
     }
+
+    @Test
+    public void TestExtendedNameEscapes() {
+        // Test basic hex:name format
+        UnicodeSet set1 = new UnicodeSet("[\\N{0041:LATIN CAPITAL LETTER A}]");
+        assertEquals("hex:name format", new UnicodeSet("[A]"), set1);
+        
+        UnicodeSet set2 = new UnicodeSet("[\\N{1F4A9:PILE OF POO}]");
+        assertEquals("hex:name format with emoji", new UnicodeSet("[\uD83D\uDCA9]"), set2);
+        
+        // Test that name mismatch throws exception
+        try {
+            new UnicodeSet("[\\N{0041:LATIN CAPITAL LETTER B}]");
+            fail("Should throw exception for name mismatch");
+        } catch (IllegalArgumentException e) {
+            assertTrue("Exception message should mention mismatch", 
+                e.getMessage().contains("mismatch"));
+        }
+        
+        // Test invalid hex format
+        try {
+            new UnicodeSet("[\\N{ZZZZ:SOME NAME}]");
+            fail("Should throw exception for invalid hex");
+        } catch (IllegalArgumentException e) {
+            assertTrue("Exception message should mention invalid hex", 
+                e.getMessage().contains("Invalid hex"));
+        }
+        
+        // Test code point out of range
+        try {
+            new UnicodeSet("[\\N{110000:INVALID}]");
+            fail("Should throw exception for code point out of range");
+        } catch (IllegalArgumentException e) {
+            assertTrue("Exception message should mention out of range", 
+                e.getMessage().contains("out of range"));
+        }
+        
+        // Test that standard \N{name} still works (backward compatibility)
+        UnicodeSet set3 = new UnicodeSet("[\\N{LATIN CAPITAL LETTER A}]");
+        assertEquals("Standard \\N{name} format", new UnicodeSet("[A]"), set3);
+    }
 }
